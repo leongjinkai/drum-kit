@@ -5,7 +5,6 @@ let fBtn = document.querySelector('.boom')
 let gBtn = document.querySelector('.ride')
 
 let beat = new Audio('./audio/chicken_nugget_audio.m4a')
-aBtn.controls = true
 
 let audio_playing = false
 
@@ -17,6 +16,8 @@ document.addEventListener('keydown', (event) => {
     if (name === 'a') {
         aBtn.classList.toggle('pressEvent')
         
+        setTimeout(() => {aBtn.classList.toggle('pressEvent')}, 100)
+
         if (audio_playing === false) {
             beat.play()
             audio_playing = true
